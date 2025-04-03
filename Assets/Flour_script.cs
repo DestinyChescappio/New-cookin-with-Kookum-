@@ -4,18 +4,18 @@ using UnityEngine;
 
 public class Flour_script : MonoBehaviour
 {
-    public GameObject gamemanager;
+    public GameObject GameManager;
     private bool isDragging = false;
     private Vector3 offset;
     private Camera mainCamera;
-    private Rigidbody rb;
-    private bool canFall = false; // New flag to ensure gravity is applied only when needed
+    // private Rigidbody rb;
+    // private bool canFall = false; // New flag to ensure gravity is applied only when needed
 
     void Start()
     {
         mainCamera = Camera.main;
-        rb = GetComponent<Rigidbody>(); // Get the Rigidbody component to apply physics
-        rb.useGravity = false; // Ensure gravity is disabled at the start
+        // rb = GetComponent<Rigidbody>(); // Get the Rigidbody component to apply physics
+        // rb.useGravity = false; // Ensure gravity is disabled at the start
     }
 
     void Update()
@@ -37,16 +37,16 @@ public class Flour_script : MonoBehaviour
     void OnMouseDown()
     {
         //
-        if(gamemanager.GetComponent<GameManager_script>().Cupbeingdragged == true){
+        if(GameManager.GetComponent<GameManager_script>().Cupbeingdragged == true){
 
         
 //debugging 
-        Debug.Log(gamemanager.GetComponent<GameManager_script>().Cupbeingdragged);
+        Debug.Log(GameManager.GetComponent<GameManager_script>().Cupbeingdragged);
 
         offset = transform.position - GetMouseWorldPos();
         isDragging = true; // Start dragging when clicked
-        rb.useGravity = false; // Disable gravity while dragging
-        canFall = false; // Disable falling during the drag
+        // rb.useGravity = false; // Disable gravity while dragging
+        // canFall = false; // Disable falling during the drag
     }
     }
 
@@ -55,6 +55,7 @@ public class Flour_script : MonoBehaviour
         isDragging = false; // Stop dragging when mouse button is released
         //CheckForDrop();
         // canFall = true; // Allow gravity to take effect after release
+        
     }
 
     Vector3 GetMouseWorldPos()
@@ -89,3 +90,4 @@ public class Flour_script : MonoBehaviour
 //         return false;
 //     }
     }
+
