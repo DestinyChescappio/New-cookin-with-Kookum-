@@ -37,17 +37,20 @@ public class Flour_script : MonoBehaviour
     void OnMouseDown()
     {
         //
-        if(GameManager.GetComponent<GameManager_script>().Cupbeingdragged == true){
+       if(GameManager.GetComponent<GameManager_script>().Cupbeingdragged == true){
 
         
 //debugging 
+        
         Debug.Log(GameManager.GetComponent<GameManager_script>().Cupbeingdragged);
+        Debug.Log("Cupbeingdragged: " + GameManager.GetComponent<GameManager_script>().Cupbeingdragged);
+        Debug.Log("Clicked on: " + gameObject.name);
 
         offset = transform.position - GetMouseWorldPos();
         isDragging = true; // Start dragging when clicked
         // rb.useGravity = false; // Disable gravity while dragging
         // canFall = false; // Disable falling during the drag
-    }
+        }
     }
 
     void OnMouseUp()

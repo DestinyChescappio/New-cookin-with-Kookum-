@@ -10,6 +10,7 @@ TagManager:
   - BakingPowder
   - Oil
   - Bowl01
+  - Water
   layers:
   - Default
   - TransparentFX

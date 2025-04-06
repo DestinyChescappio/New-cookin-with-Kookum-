@@ -8,7 +8,7 @@ public class Bowl01_script : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Check if the object that collided with the Bowl has the tags Flour, Oil, or Baking Powder
-        if (other.CompareTag("Flour") || other.CompareTag("Oil") || other.CompareTag("Baking Powder"))
+        if (other.CompareTag("Flour") || other.CompareTag("Oil") || other.CompareTag("Baking Powder")) 
         {
             // Stop the object from moving by setting its Rigidbody's velocity to zero
             Rigidbody rb = other.GetComponent<Rigidbody>();
@@ -24,7 +24,7 @@ public class Bowl01_script : MonoBehaviour
     // Optionally, use OnCollisionEnter for non-trigger colliders
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Flour") || collision.gameObject.CompareTag("Oil") || collision.gameObject.CompareTag("Baking Powder"))
+        if (collision.gameObject.CompareTag("Flour") || collision.gameObject.CompareTag("Oil") || collision.gameObject.CompareTag("Baking Powder")) 
         {
             Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
             if (rb != null)
