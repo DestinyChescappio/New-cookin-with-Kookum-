@@ -22,8 +22,11 @@ public class Flour_script : MonoBehaviour
     {
         if (isDragging)
         {
-            transform.position = GetMouseWorldPos() + offset; // Move the Flour with the mouse
+            Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = transform.position.z; // lock Z to keep it on screen
+            transform.position = mousePosition + offset;
         }
+    }
         // else
         // {
         //     // Only enable gravity after the Flour is released and it's not touching MeasureCUP
@@ -32,25 +35,18 @@ public class Flour_script : MonoBehaviour
         //         rb.useGravity = true; // Enable gravity when Flour is released and not near MeasureCUP
         //     }
         // }
-    }
+    
+    
 
     void OnMouseDown()
     {
-        //
-       if(GameManager.GetComponent<GameManager_script>().Cupbeingdragged == true){
-
-        
-//debugging 
-        
-        Debug.Log(GameManager.GetComponent<GameManager_script>().Cupbeingdragged);
-        Debug.Log("Cupbeingdragged: " + GameManager.GetComponent<GameManager_script>().Cupbeingdragged);
-        Debug.Log("Clicked on: " + gameObject.name);
-
-        offset = transform.position - GetMouseWorldPos();
-        isDragging = true; // Start dragging when clicked
-        // rb.useGravity = false; // Disable gravity while dragging
-        // canFall = false; // Disable falling during the drag
-        }
+        if (GameManager != null && GameManager.GetComponent<GameManager_script>().Cupbeingdragged)
+    {
+        Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        mousePos.z = transform.position.z;
+        offset = transform.position - mousePos;
+        isDragging = true;
+    }
     }
 
     void OnMouseUp()
