@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BakingSoda_Text_0: -3257444461951577054
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

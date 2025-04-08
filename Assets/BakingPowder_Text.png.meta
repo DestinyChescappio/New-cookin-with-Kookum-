@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BakingPowder_Text_0: 7341613205490063781
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class Hand_script : MonoBehaviour
 {
-    public GameObject HandOPEN;   
-    public GameObject HandCLOSED; 
+    public GameObject HandOPEN;
+    public GameObject HandCLOSED;
+
+    public GameObject GameManager;
 
     void Start()
     {
@@ -26,19 +28,24 @@ public class Hand_script : MonoBehaviour
         {
             if (HandOPEN != null)
             {
-                HandOPEN.SetActive(true);  
-                FollowMouse(HandOPEN);     
+                HandOPEN.SetActive(true);
+                FollowMouse(HandOPEN);
             }
-            if (HandCLOSED != null) HandCLOSED.SetActive(false); 
+            if (HandCLOSED != null) HandCLOSED.SetActive(false);
         }
     }
 
     void FollowMouse(GameObject hand)
     {
+
         Vector3 mousePosition = Input.mousePosition;
-        mousePosition.z = 10f; 
+        mousePosition.z = 10f;
         Vector3 worldPosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        
+
         if (hand != null) hand.transform.position = worldPosition;
     }
+
+
+
+
 }

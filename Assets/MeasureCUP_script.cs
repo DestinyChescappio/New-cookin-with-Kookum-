@@ -13,20 +13,25 @@ public class MeasureCUP_script : MonoBehaviour
     }
     void Update()
     {
-        if (isFollowing)
+        if (gamemanager.GetComponent<GameManager_script>().Cupbeingdragged == true)
         {
             FollowMouse();
         }
     }
 
-    void OnMouseDown()
-    {
-        isFollowing = !isFollowing;
+    //     void OnMouseDown()
+    //     {
+    //         //isFollowing = !isFollowing;
+    //         isFollowing = true;
+    //         Debug.Log("mouseDOwn");
 
-        gamemanager.GetComponent<GameManager_script>().Cupbeingdragged = isFollowing;
-//debugging 
-        Debug.Log(gamemanager.GetComponent<GameManager_script>().Cupbeingdragged);
-    }
+    //         gamemanager.GetComponent<GameManager_script>().Cupbeingdragged = isFollowing;
+    // //debugging 
+    //         Debug.Log(gamemanager.GetComponent<GameManager_script>().Cupbeingdragged);
+    //     }
+    //     void OnMouseUp(){
+    //         isFollowing =false;
+    //     }
 
     void FollowMouse()
     {
@@ -36,5 +41,5 @@ public class MeasureCUP_script : MonoBehaviour
     }
 
 
-}
 
+}

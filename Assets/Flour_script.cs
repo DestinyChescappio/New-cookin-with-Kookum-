@@ -20,42 +20,63 @@ public class Flour_script : MonoBehaviour
 
     void Update()
     {
+        if (isDragging == false)
+        {
+            if (GameManager != null && GameManager.GetComponent<GameManager_script>().flourPickedUp == true)
+            {
+
+                Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                mousePos.z = transform.position.z;
+                offset = transform.position - mousePos;
+                isDragging = true;
+            }
+        }
+
         if (isDragging)
         {
             Vector3 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             mousePosition.z = transform.position.z; // lock Z to keep it on screen
             transform.position = mousePosition + offset;
+
+            if (GameManager != null && GameManager.GetComponent<GameManager_script>().flourPickedUp == false)
+            {
+                isDragging = false;
+            }
+
+
         }
     }
-        // else
-        // {
-        //     // Only enable gravity after the Flour is released and it's not touching MeasureCUP
-        //     if (canFall && !IsTouchingMeasureCUP())
-        //     {
-        //         rb.useGravity = true; // Enable gravity when Flour is released and not near MeasureCUP
-        //     }
-        // }
-    
-    
+    // else
+    // {
+    //     // Only enable gravity after the Flour is released and it's not touching MeasureCUP
+    //     if (canFall && !IsTouchingMeasureCUP())
+    //     {
+    //         rb.useGravity = true; // Enable gravity when Flour is released and not near MeasureCUP
+    //     }
+    // }
 
-    void OnMouseDown()
-    {
-        if (GameManager != null && GameManager.GetComponent<GameManager_script>().Cupbeingdragged)
-    {
-        Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-        mousePos.z = transform.position.z;
-        offset = transform.position - mousePos;
-        isDragging = true;
-    }
-    }
 
-    void OnMouseUp()
-    {
-        isDragging = false; // Stop dragging when mouse button is released
-        //CheckForDrop();
-        // canFall = true; // Allow gravity to take effect after release
-        
-    }
+
+    // void OnMouseOver()
+    // {
+    //        Debug.Log("MOUSE HERE");
+    //     if (GameManager != null && GameManager.GetComponent<GameManager_script>().Cupbeingdragged)
+    // {
+    //     Debug.Log("HERE");
+    //     Vector3 mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+    //     mousePos.z = transform.position.z;
+    //     offset = transform.position - mousePos;
+    //     isDragging = true;
+    // }
+    // }
+
+    // void OnMouseUp()
+    // {
+    //     isDragging = false; // Stop dragging when mouse button is released
+    //     //CheckForDrop();
+    //     // canFall = true; // Allow gravity to take effect after release
+
+    // }
 
     Vector3 GetMouseWorldPos()
     {
@@ -63,6 +84,7 @@ public class Flour_script : MonoBehaviour
         mousePoint.z = Mathf.Abs(mainCamera.transform.position.z - transform.position.z); // Maintain depth
         return mainCamera.ScreenToWorldPoint(mousePoint);
     }
+
 
     //void CheckForDrop()
     //{
@@ -77,16 +99,18 @@ public class Flour_script : MonoBehaviour
     //    }
     //}
 
-//     bool IsTouchingMeasureCUP()
-//     {
-//         GameObject measureCup = GameObject.Find("MeasureCUP");
-//         if (measureCup != null)
-//         {
-//             // Check if the Flour is close to the MeasureCUP
-//             float distance = Vector3.Distance(transform.position, measureCup.transform.position);
-//             return distance < 1.0f; // Adjust this threshold to how close they should be to consider touching
-//         }
-//         return false;
-//     }
-    }
+    //     bool IsTouchingMeasureCUP()
+    //     {
+    //         GameObject measureCup = GameObject.Find("MeasureCUP");
+    //         if (measureCup != null)
+    //         {
+    //             // Check if the Flour is close to the MeasureCUP
+    //             float distance = Vector3.Distance(transform.position, measureCup.transform.position);
+    //             return distance < 1.0f; // Adjust this threshold to how close they should be to consider touching
+    //         }
+    //         return false;
+    //     }
+}
+
+
 
