@@ -6,10 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 0ca699b5389bbee40b25f3924a5f75f1
+  - enabled: 1
+    path: Assets/Scenes/StartScene.unity
+    guid: 7aab70cba64ac1d49827aad7147a7619
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/LosePage.unity
     guid: c285fba932e7aa040a195b38ae3e8f1f
+  - enabled: 1
+    path: Assets/Scenes/WinPage.unity
+    guid: 78014b23ece2fd74cb4d34c8f6c35fc6
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

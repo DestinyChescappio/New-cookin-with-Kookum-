@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 931a77654c20eb1488af7542574e3425
+guid: 29659326aba7be94ea63530bdd60f7f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3113786321773612302
-    second: bannok_0
+      213: 7693182606182815158
+    second: kookum_default_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bannok_0
+      name: kookum_default_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1179
-        height: 741
+        width: 792
+        height: 1230
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0d49cf7924663b20800000000000000
-      internalID: 3113786321773612302
+      spriteID: 6b59db1f1dca3ca60800000000000000
+      internalID: 7693182606182815158
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      bannok_0: 3113786321773612302
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
