@@ -13,25 +13,25 @@ public class MeasureCUP_script : MonoBehaviour
     }
     void Update()
     {
-        if (gamemanager.GetComponent<GameManager_script>().Cupbeingdragged == true)
+        if ( gamemanager.GetComponent<GameManager_script>().Cupbeingdragged==true)
         {
             FollowMouse();
         }
     }
 
-    //     void OnMouseDown()
-    //     {
-    //         //isFollowing = !isFollowing;
-    //         isFollowing = true;
-    //         Debug.Log("mouseDOwn");
+//     void OnMouseDown()
+//     {
+//         //isFollowing = !isFollowing;
+//         isFollowing = true;
+//         Debug.Log("mouseDOwn");
 
-    //         gamemanager.GetComponent<GameManager_script>().Cupbeingdragged = isFollowing;
-    // //debugging 
-    //         Debug.Log(gamemanager.GetComponent<GameManager_script>().Cupbeingdragged);
-    //     }
-    //     void OnMouseUp(){
-    //         isFollowing =false;
-    //     }
+//         gamemanager.GetComponent<GameManager_script>().Cupbeingdragged = isFollowing;
+// //debugging 
+//         Debug.Log(gamemanager.GetComponent<GameManager_script>().Cupbeingdragged);
+//     }
+//     void OnMouseUp(){
+//         isFollowing =false;
+//     }
 
     void FollowMouse()
     {
@@ -39,7 +39,7 @@ public class MeasureCUP_script : MonoBehaviour
         mousePosition.z = Camera.main.WorldToScreenPoint(transform.position).z; // Maintain depth
         transform.position = Camera.main.ScreenToWorldPoint(mousePosition); // Convert screen position to world position
     }
-
+  
 
 
 }

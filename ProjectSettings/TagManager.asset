@@ -11,6 +11,8 @@ TagManager:
   - Oil
   - Bowl01
   - Water
+  - Ingredient
+  - Salt
   layers:
   - Default
   - TransparentFX
