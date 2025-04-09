@@ -110,10 +110,65 @@ public class DraggingHand : MonoBehaviour
 
          }
     }
+    if(col.gameObject.name == "Corn Starch"){
+         if (GameManager != null){
+            Debug.Log("cornstarch");
+            if(GameManager.GetComponent<GameManager_script>().Cupbeingdragged ==true){
+           
+                //drag the flour :)
+               if(GameManager.GetComponent<GameManager_script>().cornstarchPickup ==false){
+                GameManager.GetComponent<GameManager_script>().cornstarchPickup =true;
+               }
+
+             }
+
+         }
+    }
+    if(col.gameObject.name == "geletin"){
+         if (GameManager != null){
+            Debug.Log("geletin");
+            if(GameManager.GetComponent<GameManager_script>().Cupbeingdragged ==true){
+           
+                //drag the flour :)
+               if(GameManager.GetComponent<GameManager_script>().geletinPickup ==false){
+                GameManager.GetComponent<GameManager_script>().geletinPickup =true;
+               }
+
+             }
+
+         }
+    }
+    if(col.gameObject.name == "sprinkles"){
+         if (GameManager != null){
+            Debug.Log("sprinkles");
+            if(GameManager.GetComponent<GameManager_script>().Cupbeingdragged ==true){
+           
+                //drag the flour :)
+               if(GameManager.GetComponent<GameManager_script>().sprinklesPickup ==false){
+                GameManager.GetComponent<GameManager_script>().sprinklesPickup =true;
+               }
+
+             }
+
+         }
+    }
+    if(col.gameObject.name == "Sugar"){
+         if (GameManager != null){
+            Debug.Log("sugar");
+            if(GameManager.GetComponent<GameManager_script>().Cupbeingdragged ==true){
+           
+                //drag the flour :)
+               if(GameManager.GetComponent<GameManager_script>().sugarPickup ==false){
+                GameManager.GetComponent<GameManager_script>().sugarPickup =true;
+               }
+
+             }
+
+         }
+    }
  }
 
  
-
  //** ingredients
   void OnTriggerExit2D(Collider2D col){
      if(col.gameObject.name == "MeasureCUP"){
@@ -142,9 +197,19 @@ public class DraggingHand : MonoBehaviour
         if(GameManager.GetComponent<GameManager_script>().bakingsodaPickup ==true){
             GameManager.GetComponent<GameManager_script>().bakingsodaPickup =false;
         }
+        if(GameManager.GetComponent<GameManager_script>().cornstarchPickup ==true){
+            GameManager.GetComponent<GameManager_script>().cornstarchPickup =false;
+        }
+        if(GameManager.GetComponent<GameManager_script>().geletinPickup ==true){
+            GameManager.GetComponent<GameManager_script>().geletinPickup =false;
+        }
+        if(GameManager.GetComponent<GameManager_script>().sprinklesPickup ==true){
+            GameManager.GetComponent<GameManager_script>().sprinklesPickup =false;
+        }
+        if(GameManager.GetComponent<GameManager_script>().sugarPickup ==true){
+            GameManager.GetComponent<GameManager_script>().sugarPickup =false;
+        }
      }
      }
 
-     
   }
-

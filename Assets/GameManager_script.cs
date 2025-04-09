@@ -9,6 +9,10 @@ public class GameManager_script : MonoBehaviour
     public bool bakingpowderPickedUp = false; 
     public bool saltPickedUp = false;
     public bool bakingsodaPickup = false;
+    public bool cornstarchPickup = false;
+    public bool geletinPickup = false;
+    public bool sprinklesPickup = false;
+    public bool sugarPickup = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

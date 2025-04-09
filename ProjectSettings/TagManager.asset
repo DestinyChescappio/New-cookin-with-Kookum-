@@ -14,9 +14,9 @@ TagManager:
   - Ingredient
   - Salt
   - Sprinkles
-  - Sugar
   - Cornstarch
   - Geletin
+  - sugarr
   layers:
   - Default
   - TransparentFX

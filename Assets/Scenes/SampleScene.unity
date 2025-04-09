@@ -265,7 +265,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 20.48, y: 20.48}
+  m_Size: {x: 3.8, y: 7.84}
   m_EdgeRadius: 0
 --- !u!1 &184059484
 GameObject:
@@ -400,7 +400,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 8.2, y: 6.2}
+  m_Size: {x: 5.2, y: 5.93}
   m_EdgeRadius: 0
 --- !u!114 &184059489
 MonoBehaviour:
@@ -548,7 +548,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.84, y: 8.15}
+  m_Size: {x: 3.75, y: 3.85}
   m_EdgeRadius: 0
 --- !u!114 &344369883
 MonoBehaviour:
@@ -709,7 +709,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 8, y: 8}
+  m_Size: {x: 3.49, y: 4.64}
   m_EdgeRadius: 0
 --- !u!1 &414156199
 GameObject:
@@ -1600,7 +1600,7 @@ GameObject:
   - component: {fileID: 683633420}
   m_Layer: 0
   m_Name: geletin
-  m_TagString: Untagged
+  m_TagString: Geletin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1733,6 +1733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81cde2fe45a4ca4a9a6dbf24def9496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 1876939202}
 --- !u!1 &753285200
 GameObject:
   m_ObjectHideFlags: 0
@@ -1953,7 +1954,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 3.32, y: 4.3}
   m_EdgeRadius: 0
 --- !u!114 &814798001
 MonoBehaviour:
@@ -3043,7 +3044,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1, y: 1.23}
+  m_Offset: {x: -0.66, y: 1.75}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3053,7 +3054,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 11.16, y: 8.78}
+  m_Size: {x: 0.64, y: 0.67}
   m_EdgeRadius: 0
 --- !u!1 &1572128396
 GameObject:
@@ -3275,7 +3276,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 2.01, y: 3}
   m_EdgeRadius: 0
 --- !u!114 &1650624554
 MonoBehaviour:
@@ -3304,7 +3305,7 @@ GameObject:
   - component: {fileID: 1729287291}
   m_Layer: 0
   m_Name: Sugar
-  m_TagString: Untagged
+  m_TagString: sugarr
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3423,7 +3424,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.8, y: 5.73}
+  m_Size: {x: 2.49, y: 3.42}
   m_EdgeRadius: 0
 --- !u!114 &1729287292
 MonoBehaviour:
@@ -3437,6 +3438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e8d2eeab74bb64ea71a5559b698b4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 1876939202}
 --- !u!1 &1861093313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3451,7 +3453,7 @@ GameObject:
   - component: {fileID: 1861093316}
   m_Layer: 0
   m_Name: sprinkles
-  m_TagString: Untagged
+  m_TagString: Sprinkles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3570,7 +3572,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.73, y: 3.73}
+  m_Size: {x: 1.73, y: 1.66}
   m_EdgeRadius: 0
 --- !u!114 &1861093317
 MonoBehaviour:
@@ -3584,6 +3586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8984e1ec8d2d99549b701f57dcda784a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 1876939202}
 --- !u!1 &1876939202
 GameObject:
   m_ObjectHideFlags: 0
@@ -3620,6 +3623,10 @@ MonoBehaviour:
   bakingpowderPickedUp: 0
   saltPickedUp: 0
   bakingsodaPickup: 0
+  cornstarchPickup: 0
+  geletinPickup: 0
+  sprinklesPickup: 0
+  sugarPickup: 0
 --- !u!4 &1876939204
 Transform:
   m_ObjectHideFlags: 0
@@ -3735,6 +3742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a81cde2fe45a4ca4a9a6dbf24def9496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 0}
 --- !u!1 &1901999924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3749,7 +3757,7 @@ GameObject:
   - component: {fileID: 1901999927}
   m_Layer: 0
   m_Name: Corn Starch
-  m_TagString: Untagged
+  m_TagString: Cornstarch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3882,6 +3890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54f254f4254bbaf4a9272b5129d8f7e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameManager: {fileID: 1876939202}
 --- !u!1 &2047971471
 GameObject:
   m_ObjectHideFlags: 0
@@ -4114,7 +4123,6 @@ SceneRoots:
   - {fileID: 1002042124}
   - {fileID: 1075152386}
   - {fileID: 510208480}
-  - {fileID: 1876939204}
   - {fileID: 378883675}
   - {fileID: 814797996}
   - {fileID: 344369881}
@@ -4124,3 +4132,4 @@ SceneRoots:
   - {fileID: 683633419}
   - {fileID: 1729287290}
   - {fileID: 1861093315}
+  - {fileID: 1876939204}
