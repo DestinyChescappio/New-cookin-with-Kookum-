@@ -1,9 +1,8 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class playbtn_script : MonoBehaviour
 {
-    public GameObject play_01; // Drag the play_01 GameObject here in the Inspector
+    public GameObject play_01; // Drag your play_01 GameObject here in the Inspector
 
     void Start()
     {
@@ -14,14 +13,8 @@ public class playbtn_script : MonoBehaviour
     void OnMouseEnter()
     {
         if (play_01 != null)
-            play_01.SetActive(true);
+            play_01.SetActive(true);  // Show the hover version
 
-        gameObject.SetActive(false); // Hide this (play)
-    }
-
-    void OnMouseDown()
-    {
-        Debug.Log("Play button clicked!");
-        SceneManager.LoadScene("StartScene");
+        gameObject.SetActive(false);  // Hide this (original play)
     }
 }
