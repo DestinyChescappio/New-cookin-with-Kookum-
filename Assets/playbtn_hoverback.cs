@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class playbtn_hover_click : MonoBehaviour
 {
-    public GameObject play; // Optional: reference to swap back if needed
+    public GameObject play; 
 
     void OnMouseDown()
     {
@@ -13,10 +13,13 @@ public class playbtn_hover_click : MonoBehaviour
 
     void OnMouseExit()
     {
-        // Optional: Swap back to original play button if desired
+        
         if (play != null)
             play.SetActive(true);
 
         gameObject.SetActive(false); // Hide play_01
     }
 }
+
+//highlighted button script 
+//public "Play" has the plain object in inspector + highlighted button is disabled 

@@ -2,15 +2,22 @@ using UnityEngine;
 
 public class Cornstrach_label : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public GameObject labelObject; 
+
     void Start()
     {
-        
+        if (labelObject != null)
+            labelObject.SetActive(false); 
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnMouseEnter()
     {
-        
+        if (labelObject != null)
+            labelObject.SetActive(true); 
+    }
+    void OnMouseExit()
+    {
+        if (labelObject != null)
+            labelObject.SetActive(false); 
     }
 }

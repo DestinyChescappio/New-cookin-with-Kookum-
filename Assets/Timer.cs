@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] private float remainingTime = 20f; // ⏳ Start at 20 seconds
+    [SerializeField] private float remainingTime = 40f; //  @ 40 seconds
 
     private bool hasLost = false;
 

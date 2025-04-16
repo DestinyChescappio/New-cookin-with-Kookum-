@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class playbtn_script : MonoBehaviour
 {
-    public GameObject play_01; // Drag your play_01 GameObject here in the Inspector
+    public GameObject play_01; 
 
     void Start()
     {
@@ -13,8 +13,11 @@ public class playbtn_script : MonoBehaviour
     void OnMouseEnter()
     {
         if (play_01 != null)
-            play_01.SetActive(true);  // Show the hover version
+            play_01.SetActive(true);  
 
-        gameObject.SetActive(false);  // Hide this (original play)
+        gameObject.SetActive(false);  
     }
 }
+
+//plain button script 
+//public "Play" has the highlighted object in inspector 

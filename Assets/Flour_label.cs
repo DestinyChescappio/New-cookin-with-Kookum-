@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Flour_label : MonoBehaviour
 {
-    public GameObject labelObject; // Drag your label GameObject into this field in the Inspector
+    public GameObject labelObject; // 
 
     void Start()
     {
         if (labelObject != null)
-            labelObject.SetActive(false); // Hide it initially
+            labelObject.SetActive(false); 
     }
 
     void OnMouseEnter()
